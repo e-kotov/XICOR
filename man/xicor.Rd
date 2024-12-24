@@ -12,6 +12,7 @@ xicor(
   ties = TRUE,
   method = "asymptotic",
   nperm = 1000,
+  nthreads = 1,
   factor = FALSE
 )
 }
@@ -37,6 +38,8 @@ enough.}
 
 \item{nperm}{In the case of a permutation test, \code{nperm} is the number
 of permutations to do.}
+
+\item{nthreads}{Number of threads to use for parallel computation for the permutation method. Defaults to 1. If set to more then 1, use \code{\link[future]{plan}} to set the number of workers.}
 
 \item{factor}{Whether to transform integers into factors, the default is to
 leave them alone.}
